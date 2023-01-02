@@ -1,28 +1,28 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import AboutUs from './components/Pages/AboutUsPage';
-import Home from './components/Pages/HomePage';
-import Gallery from './components/Pages/GalleryPage';
-import Reviews from './components/Pages/ReviewsPage';
-import Appointment from './components/Pages/AppointmentPage';
-import Navbar from './components/Navbar.js';
+import Navbar from './components/Navbar';
+import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
+import AboutUs from './components/pages/AboutUs';
+import Gallery from './components/pages/Gallery';
+import Reviews from './components/pages/Reviews';
+import BookNow from './components/pages/BookNow';
 
-const App = () => {
-    return (
-        <>
-            <Navbar/>
-            <div className="container">
-                <Routes>
-                    <Route path='/' element={<Home/>}></Route>
-                    <Route path='/About' element={<AboutUs/>}></Route>
-                    <Route path='/Gallery' element={<Gallery/>}></Route>
-                    <Route path='Reviews' element={<Reviews/>}></Route>
-                    <Route path='Appointments' element={<Appointment/>}></Route>
-                </Routes>
-            </div>
-
-        </>
-    );
-};
+function App() {
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/about-us' component={AboutUs} />
+          <Route path='/gallery' component={Gallery} />
+          <Route path='/reviews' component={Reviews} />
+          <Route path='/book-now' component={BookNow} />
+        </Switch>
+      </Router>
+    </>
+  );
+}
 
 export default App;
