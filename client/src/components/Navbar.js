@@ -81,15 +81,6 @@ function Navbar() {
             </li>
 
 
-            <li>
-              <Link
-                to='/book-now'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                BOOK NOW
-              </Link>
-            </li>
           </ul>
         </div>
       </nav>
