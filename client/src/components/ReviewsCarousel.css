@@ -9,7 +9,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
 }
 
 .slider {
@@ -28,7 +28,7 @@
     z-index: 10;
     cursor: pointer;
     user-select: none;
-    margin-left: 50px;
+    margin-left: 80px;
 }
 
 .left-arrow {
@@ -40,7 +40,7 @@
     z-index: 10;
     cursor: pointer;
     user-select: none;
-    margin-right: 50px;
+    margin-right: 80px;
 }
 
 .slide {

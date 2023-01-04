@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Paper, Box } from '@material-ui/core';
-import { TextField, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { TextField, FormControl, InputLabel, Select, MenuItem, Grid } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import useStyles from './ReviewsFormStyle';
 import { postReview } from '../actions/reviews';
@@ -34,6 +34,7 @@ const Form = () => {
     }
 
     return (
+        <Grid className={classes.mainContainer} item xs={12} sm={4}>
         <Box display="flex" justifyContent="center" alignItems="center" flexDirection="column" margin="auto">
             <h2>Leave a review!</h2>
             <Paper className={classes.paper}>
@@ -78,6 +79,7 @@ const Form = () => {
                 </form>
             </Paper>
         </Box>
+        </Grid>
     );
 }
 

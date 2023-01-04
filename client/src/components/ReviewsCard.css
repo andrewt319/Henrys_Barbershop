@@ -2,11 +2,26 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width:40rem;
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    width:60rem;
     background-color: #ffffff;
     padding: 20px;
     margin: 15px;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+}
+
+@media all and (max-width: 1200px) {
+    .reviews-box-container{
+        width: 40rem;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .reviews-box-container{
+        width: 20rem;
+    }
 }
 
 .username{

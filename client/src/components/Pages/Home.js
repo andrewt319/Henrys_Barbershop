@@ -4,6 +4,7 @@ import Cards from '../Cards';
 import HeroSection from '../HeroSection';
 import ReviewsContainer from '../ReviewsContainer';
 import BookNow from './BookNow';
+import AboutUsContainer from '../AboutUsContainer'
 import Footer from '../Footer';
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
       <Cards />
       <ReviewsContainer />
       <BookNow />
+      <AboutUsContainer />
       <Footer />
     </>
   );

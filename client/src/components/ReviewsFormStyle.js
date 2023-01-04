@@ -1,24 +1,26 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
-  root: {
-
-},
   paper: {
     padding: theme.spacing(2),
     justify: 'center',
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'wrap',
-    width:'40rem',
-    boxShadow: '2px 2px 30px rgba(0, 0, 0, 0.1)',
+    width:'60rem',
     backgroundColor: '#ffffff',
     margin: '15px',
+
+    boxShadow: '0 6px 20px rgba(56, 125, 255, 0.17)',
+    webkitFilter: 'drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017))',
+    filter: 'drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017))',
+    borderRadius: '10px',
   },
   form: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    padding: '0.5rem',
   },
   fileInput: {
     width: '97%',
@@ -45,5 +47,25 @@ export default makeStyles((theme) => ({
   },
   box4: {
     top: '30px'
+  },
+  breakpoints: {
+    sm: '0px',
+    md: '600px',
+    lg: '1000px',
+  },
+  [theme.breakpoints.up('sm')]: {
+    paper: {
+      width: '20rem',
+    }
+  },
+  [theme.breakpoints.up('md')]: {
+    paper: {
+      width: '40rem',
+    }
+  },
+  [theme.breakpoints.up('lg')]: {
+    paper: {
+      width: '60rem',
+    }
   },
 }));
