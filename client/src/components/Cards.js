@@ -32,9 +32,9 @@ function Cards() {
               label='@seshu_mallina'
             />
             <CardItem
-              src='/videos/xander.mp4'
+              src='/videos/diego.mp4'
               text='The "Artisanal Undercut" - A unique haircut that features a shaved undercut and a textured top styled with a matte product for a natural look.'
-              label='@xander_lau'
+              label='@diego__zlz'
             />
           </ul>
         </div>

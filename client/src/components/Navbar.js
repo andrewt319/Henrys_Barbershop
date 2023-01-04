@@ -28,16 +28,19 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+
+          <Link to='/' className='navbar-hand-scissors-logo'>
             <i class='fa fa-hand-scissors' />
+          </Link>
+          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             HENRY'S BARBERSHOP
           </Link>
+
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
+
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-
-
             <li className='nav-item'>
               <Link to='/about-us' className='nav-links' onClick={closeMobileMenu}>
                 About Us
@@ -67,6 +70,17 @@ function Navbar() {
             </li>
 
 
+            <li className='nav-item'>
+              <Link
+                to='/book-now'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Book Now
+              </Link>
+            </li>
+
+
             <li>
               <Link
                 to='/book-now'
@@ -76,10 +90,7 @@ function Navbar() {
                 BOOK NOW
               </Link>
             </li>
-
-
           </ul>
-          {button && <Button buttonStyle="btn--outline">BOOK NOW</Button>}
         </div>
       </nav>
     </>
