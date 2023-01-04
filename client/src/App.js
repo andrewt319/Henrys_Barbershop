@@ -2,11 +2,11 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/pages/Home';
-import AboutUs from './components/pages/AboutUs';
-import Gallery from './components/pages/Gallery';
-import Reviews from './components/pages/Reviews';
-import BookNow from './components/pages/BookNow';
+import Home from './components/Pages/Home';
+import AboutUs from './components/Pages/AboutUs';
+import Gallery from './components/Pages/Gallery';
+import Reviews from './components/Pages/Reviews';
+import BookNow from './components/Pages/BookNow';
 
 function App() {
   return (

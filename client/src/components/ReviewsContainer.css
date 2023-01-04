@@ -1,0 +1,12 @@
+.reviews-container{
+    background: #fff;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+.reviews-heading{
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

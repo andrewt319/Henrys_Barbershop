@@ -1,9 +1,10 @@
 import express from 'express';
 
-import { getReviews } from '../controllers/ReviewsController.js';
+import { getReviews, postReview } from '../controllers/ReviewsController.js';
 
 const router = express.Router();
 
 router.get('/', getReviews);
+router.post('/', postReview);
 
 export default router;

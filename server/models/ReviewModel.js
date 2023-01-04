@@ -2,8 +2,9 @@ import mongoose from 'mongoose';
 
 const reviewSchema = mongoose.Schema({
     name: String,
-    message: String,
-    stars: {
+    username: String,
+    review: String,
+    rating: {
         type: Number,
         default: 0
     }

@@ -10,3 +10,15 @@ export const getReviews = async (req, res) => {
         console.log(error)
     }
 }
+
+export const postReview = async (req, res) => {
+    const data = req.body;
+    const review = new ReviewModel(data);
+
+    try {
+        await review.save();
+        res.status(201).json(review);
+    } catch (error) {
+        console.log(error);
+    }
+} 
