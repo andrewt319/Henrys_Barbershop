@@ -3,9 +3,9 @@ import ReviewsForm from './ReviewsForm';
 import ReviewsCarousel from './ReviewsCarousel';
 import './ReviewsContainer.css';
 
-const ReviewsContainer = () => {
+const ReviewsContainer = ({ id }) => {
     return (
-        <div className='reviews-container'>
+        <div className='reviews-container' id={id}>
             <div className="reviews-heading">
                 <h1 className="reviews-text">Comments from our customers!</h1>
             </div>

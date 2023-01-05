@@ -7,10 +7,22 @@ import AboutUs from './components/Pages/AboutUs';
 import Gallery from './components/Pages/Gallery';
 import Reviews from './components/Pages/Reviews';
 import BookNow from './components/Pages/BookNow';
+import AboutUsContainer from './components/AboutUsContainer';
+import Footer from './components/Footer';
+import ReviewsContainer from './components/ReviewsContainer';
+import Cards from './components/Cards';
 
 function App() {
   return (
     <>
+      <Navbar />
+      <Home id='home-page-link'/>
+      <Cards id='cards-page-link'/>
+      <ReviewsContainer id='reviews-page-link'/>
+      <BookNow id='book-now-page'/>
+      <AboutUsContainer id='about-us-page-link'/>
+      <Footer />
+    {/*
       <Router>
         <Navbar />
         <Switch>
@@ -21,6 +33,7 @@ function App() {
           <Route path='/book-now' component={BookNow} />
         </Switch>
       </Router>
+  */}
     </>
   );
 }

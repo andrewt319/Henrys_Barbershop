@@ -3,9 +3,10 @@ import { InlineWidget } from "react-calendly";
 import Footer from '../Footer';
 import '../../App.css';
 
-export default function BookNow() {
+export default function BookNow({ id }) {
   return (
     <>
+    <div id={id}>
       <h1 className='book-now'>
         BOOK NOW
         <span>Can't find a time that works? Direct message  @Henrysbarbershop on Instagram.</span>
@@ -18,6 +19,7 @@ export default function BookNow() {
         />
 
       </h1>
+      </div>
     </>
   )
 }

@@ -1,12 +1,13 @@
 import React, { Fragment, useState } from 'react';
 import './AboutUsContainer.css';
 
-const AboutUsContainer = () => {
+const AboutUsContainer = ({ id }) => {
     const [ toggleTab, setToggleTab ] = useState(1);
     const toggleState = (index) => {
         setToggleTab(index);
     }
     return (
+        <div id={id}>
         <Fragment className="about-us-container">
             <section className="about">
                 <div className="row">
@@ -116,6 +117,7 @@ const AboutUsContainer = () => {
                 </div>
             </section>
         </Fragment>
+        </div>
     )
 }
 

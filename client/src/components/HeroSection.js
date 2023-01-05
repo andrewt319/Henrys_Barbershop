@@ -3,9 +3,9 @@ import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
 
-function HeroSection() {
+function HeroSection({ id }) {
   return (
-    <div className='hero-container'>
+    <div id={id} className='hero-container'>
       <video src='/videos/video-3.mp4' autoPlay loop muted />
       <h1>HENRY'S BARBERSHOP</h1>
       <p>Rediscover Confidence</p>

@@ -7,15 +7,18 @@ import BookNow from './BookNow';
 import AboutUsContainer from '../AboutUsContainer'
 import Footer from '../Footer';
 
-function Home() {
+function Home({ id }) {
   return (
     <>
-      <HeroSection />
+      <HeroSection id={id}/>
+
+      { /*
       <Cards />
       <ReviewsContainer />
       <BookNow />
-      <AboutUsContainer />
-      <Footer />
+      <AboutUsContainer id="about-us-home"/>
+      <Footer /> 
+  */ }
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import './Navbar.css';
 
 function Navbar() {
@@ -32,7 +32,14 @@ function Navbar() {
           <Link to='/' className='navbar-hand-scissors-logo'>
             <i class='fa fa-hand-scissors' />
           </Link>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link 
+            to='home-page-link' 
+            className='navbar-logo' 
+            onClick={closeMobileMenu}
+            smooth={true} 
+            duration={1000} 
+            spy={true}
+            offset={-40}>
             HENRY'S BARBERSHOP
           </Link>
 
@@ -42,17 +49,14 @@ function Navbar() {
 
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/about-us' className='nav-links' onClick={closeMobileMenu}>
-                About Me
-              </Link>
-            </li>
-
-
-            <li className='nav-item'>
               <Link
-                to='/gallery'
+                to='cards-page-link'
                 className='nav-links'
                 onClick={closeMobileMenu}
+                smooth={true} 
+                duration={1000} 
+                spy={true} 
+                offset={-30}
               >
                 Gallery
               </Link>
@@ -61,9 +65,13 @@ function Navbar() {
 
             <li className='nav-item'>
               <Link
-                to='/reviews'
+                to='reviews-page-link'
                 className='nav-links'
+                smooth={true} 
+                duration={1000} 
+                spy={true} 
                 onClick={closeMobileMenu}
+                offset={-70}
               >
                 Reviews
               </Link>
@@ -72,11 +80,28 @@ function Navbar() {
 
             <li className='nav-item'>
               <Link
-                to='/book-now'
+                to='book-now-page'
                 className='nav-links'
                 onClick={closeMobileMenu}
+                smooth={true} 
+                duration={1000} 
+                spy={true} 
+                offset={-30}
               >
                 Book Now
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link 
+              to='about-us-page-link' 
+              smooth={true} 
+              duration={1000} 
+              spy={true} 
+              offset={-60}
+              className='nav-links' 
+              onClick={closeMobileMenu}>
+                About Me
               </Link>
             </li>
 
