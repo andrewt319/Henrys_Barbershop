@@ -39,7 +39,7 @@ function Navbar() {
             smooth={true} 
             duration={1000} 
             spy={true}
-            offset={-40}>
+            offset={-50}>
             HENRY'S BARBERSHOP
           </Link>
 

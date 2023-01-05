@@ -12,7 +12,7 @@
 
 import React from 'react';
 import './Button.css';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
 
@@ -32,7 +32,13 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <Link to='/book-now' className='btn-mobile'>
+    <Link 
+      to='book-now-page' 
+      className='btn-mobile'
+      smooth={true} 
+      duration={1000} 
+      spy={true} 
+      offset={-30}>
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}

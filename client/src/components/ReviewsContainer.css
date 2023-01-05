@@ -1,6 +1,8 @@
 .reviews-container{
     background: #fff;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem;
+    min-height: 100vh;
+    padding-top: 5rem;
 }
 
 .reviews-heading{
