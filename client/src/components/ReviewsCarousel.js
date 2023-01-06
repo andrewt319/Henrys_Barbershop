@@ -6,15 +6,25 @@ import ReviewsCard from './ReviewsCard';
 import { IoIosArrowBack , IoIosArrowForward } from 'react-icons/io';
 
 const ReviewsCarousel = () => {
+    const andrewReview = {name:"Andrew Tan",
+                            username:"@andrewtan._",
+                            rating:5,
+                            review:"The greatest"}
+    const jordanReview = {
+                            name:"Jordan",
+                            username:"@JP",
+                            rating:5,
+                            review:"Started getting cuts at Henry’s in 2021; have never gone to another barber since. Best barber in the game…"}
     const reviews = useSelector((state) => state.reviews);
+    const defaultReviews = [andrewReview, jordanReview];
     const [current, setCurrent] = useState(0);
-    const [length, setLength] = useState(reviews.length);
+    const [length, setLength] = useState(reviews.length !== 0 ? reviews.length : 2);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getReviews());
-        setLength(reviews.length);
-        setCurrent(reviews.length - 1);
+        setLength(reviews.length !== 0 ? reviews.length : 2);
+        setCurrent(reviews.length !== 0 ? reviews.length - 1 : 0);
         //localStorage.setItem('index', reviews.length - 1);
     }, [reviews.length]) 
 
@@ -45,7 +55,7 @@ const ReviewsCarousel = () => {
         <section id="reviews">
             <section className="slider">
                 <IoIosArrowBack className="left-arrow" onClick={prevSlide}/>
-                {reviews.map((review, index) => {
+                {(reviews.length !== 0? reviews : defaultReviews).map((review, index) => {
                     return (
                         <div className={index === current ? 'slide active' : 'slide'} key={index}>
                             {index === current && 
@@ -55,8 +65,8 @@ const ReviewsCarousel = () => {
                             rating={review.rating}
                             review={review.review}/>}
                         </div>
-                    );
-                })}
+                        );
+                    })}
                 <IoIosArrowForward className="right-arrow" onClick={nextSlide}/>
             </section>
         </section>
