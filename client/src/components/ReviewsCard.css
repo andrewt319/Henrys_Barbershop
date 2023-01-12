@@ -24,6 +24,12 @@
     }
 }
 
+@media all and (max-width: 400px) {
+    .reviews-box-container{
+        width: 15rem;
+    }
+}
+
 .username{
     display: flex;
     flex-direction: column;

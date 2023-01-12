@@ -42,6 +42,14 @@
     user-select: none;
     margin-right: 80px;
 }
+@media all and (max-width: 500px) {
+    .left-arrow{
+        left: 75px;
+    }
+    .right-arrow{
+        right: 75px;
+    }
+}
 
 .slide {
     opacity: 0;
