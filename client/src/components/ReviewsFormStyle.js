@@ -48,12 +48,7 @@ export default makeStyles((theme) => ({
   box4: {
     top: '30px'
   },
-  breakpoints: {
-    sm: '0px',
-    md: '600px',
-    lg: '1000px',
-  },
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.up('xs')]: {
     paper: {
       width: '20rem',
     }
